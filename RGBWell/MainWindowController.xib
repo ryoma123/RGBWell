@@ -6,6 +6,10 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="RGBWell" customModuleProvider="target">
             <connections>
+                <outlet property="bSlider" destination="ejM-XM-DLE" id="4H6-fk-cNz"/>
+                <outlet property="colorWell" destination="OL2-j7-RYQ" id="tnY-yj-a7P"/>
+                <outlet property="gSlider" destination="CJc-Cj-1lz" id="JJR-SS-zWP"/>
+                <outlet property="rSlider" destination="bpx-Ag-Kae" id="cNn-u5-YaM"/>
                 <outlet property="window" destination="w56-rQ-ikZ" id="UmG-Zy-ZMZ"/>
             </connections>
         </customObject>
@@ -19,6 +23,59 @@
             <view key="contentView" id="ltl-ci-rSG">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HuY-pR-k3x">
+                        <rect key="frame" x="319" y="189" width="14" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="R" id="90N-04-QsR">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bpx-Ag-Kae">
+                        <rect key="frame" x="338" y="187" width="96" height="20"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" tickMarkPosition="above" sliderType="linear" id="e2W-qd-sxW">
+                            <connections>
+                                <action selector="adjustRed:" target="-2" id="gbq-0t-egT"/>
+                            </connections>
+                        </sliderCell>
+                    </slider>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yw4-23-D3w">
+                        <rect key="frame" x="319" y="155" width="15" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="G" id="noQ-BP-lig">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJc-Cj-1lz">
+                        <rect key="frame" x="338" y="153" width="96" height="20"/>
+                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="1" tickMarkPosition="above" sliderType="linear" id="9tg-Bw-HUn">
+                            <connections>
+                                <action selector="adjustGreen:" target="-2" id="D0f-gU-qKS"/>
+                            </connections>
+                        </sliderCell>
+                    </slider>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDf-MY-KhX">
+                        <rect key="frame" x="319" y="120" width="14" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="B" id="xdL-Js-USk">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejM-XM-DLE">
+                        <rect key="frame" x="338" y="118" width="96" height="20"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="1" tickMarkPosition="above" sliderType="linear" id="qDS-NU-MSS"/>
+                        <connections>
+                            <action selector="adjustBlue:" target="-2" id="ECt-DF-5mv"/>
+                        </connections>
+                    </slider>
+                    <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OL2-j7-RYQ">
+                        <rect key="frame" x="54" y="105" width="221" height="116"/>
+                        <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </colorWell>
+                </subviews>
             </view>
             <point key="canvasLocation" x="303" y="373"/>
         </window>
